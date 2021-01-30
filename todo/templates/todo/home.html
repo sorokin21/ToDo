@@ -1,0 +1,10 @@
+{% extends "todo/base.html" %}
+{% block content %}
+<h1>Home Page</h1>
+{% for t in to_do_lists %}
+     <h3>{{t.title}}</h3>
+     <h6>{{t.created_date}}</h3>
+{% empty %}
+     <p>No lists here yet :(</p>
+{% endfor %}
+{% endblock %}
